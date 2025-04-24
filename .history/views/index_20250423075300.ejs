@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title> <link rel='stylesheet' href='/stylesheets/style.css' /> </head>
+<body>
+<h1><%= title %></h1> <p>Welcome 1  to the Mini Messageboard!</p>
+<div class="message-list">
+    <% messages.forEach(function(message) { %> <div class="message">
+        <p><strong><%= message.user %>:</strong> <%= message.text %></p> <p><em>Added: <%= message.added.toLocaleString() %></em></p> </div>
+      <hr> <% }); %>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title><%= title %></title>
+<link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<h1><%= title %></h1>
+<form method="POST" action="/message/<%= index %>">
+    <div>
+      <label for="userName">User Name:</label>
+      <input type="text" id="userName" name="userName" value="<%= message.user %>" required>
+    </div>
+    <div>
+      <label for="messageText">Message Text:</label>
+      <textarea id="messageText" name="messageText" required><%= message.text %></textarea>
+    </div>
+    <button type="submit">Save Changes</button>
+</form>
+<p><a href="/">Back to Messages</a></p>
+</body>
+</html>
